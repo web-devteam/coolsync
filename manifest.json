@@ -1,0 +1,16 @@
+{
+  "name": "CoolSync",
+  "short_name": "CoolSync",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "theme_color": "#00bcd4",
+  "icons": [
+    {
+      "src": "logo7.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+
+  ]
+}
+
