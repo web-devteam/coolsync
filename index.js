@@ -6,6 +6,25 @@ date=date.slice(0, 3)
 
 let templimit = 0
 let tempfactor = 0.5
+const url = 'https://api.open-meteo.com/v1/forecast?latitude=10.5036&longitude=7.4337&current=temperature_2m';
+
+fetch(url)
+  .then(response => {
+    if (!response.ok) {throw new Error(`HTTP error! Status: response.status`);
+   
+  } return response.json();}
+  )
+  .then(data => {
+    const temp = data.current.temperature_2m;
+    console.log(`Current temperature in Lagos:${temp}°C`);
+    temperature=temp
+    console.log(temperature)
+  })
+  .catch(error => {
+    console.error('Error fetching weather data:', error);
+  });
+   
+
 document.getElementById("timer").addEventListener("click", ()=>{
 document.getElementById("timescreen").style.display="flex"
 document.getElementById("logscreen").style.display="none"
