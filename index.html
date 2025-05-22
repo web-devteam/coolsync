@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coolsync</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="logo5.png">
+</head>
+<body>
+
+<img id="mainimg" src="1000_F_353149444_ITUA9rVIdVd7PdmrzsBBK7XrTSgeSala-removebg-preview.png" alt="">
+<button id="movebtn"></button>
+<div id="timescreen"><div id="timebx"><h1 id="hour">00</h1><h1>:</h1><h1 id="min">20</h1><h1>:</h1><h1 id="sec">00</h1></div>
+<button id="start">track <img src="asset/humidity_mid_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+<div id="sidetime"><p id="storetxt">liquid storage state : 0% used</p><p id="packstxt">packs used : 0</p></div>
+<img src="asset/airwave_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" id="refillbtn" alt=""></div>
+<div id="logscreen"><div id="table"><div id="header"><p style="padding-bottom: 10px;">min</p><p>max</p><p>other</p><p>avg</p><p>air</p></div>
+</div>
+<div id="addpage">
+<h2>gpu temp</h2>
+<div id="sec1"><input id="mintxt" placeholder="min" type="text"><input id="maxtxt" placeholder="max" type="text"><input id="othertxt" placeholder="other" type="text"></div>
+<h2>air flow</h2>
+<div id="sec2"><p id="lowair">low</p><p id="midair">medium</p><p id="highair">high</p></div>
+<div id="sec3"><button id="cali">calibrate</button><p id="result"></p></div>
+</div>
+<button id="add">+</button></div>
+<div id="weatherscreen"><div id="tempbx"><h1 id="temp">39°C</h1><h1 id="undertemp">kaduna sunny</h1></div>
+<div id="optbx"><h1 id="esttemp">70C estimated</h1>
+<progress id="progress" value="5" max="100"><input type="value"></progress>
+<div id="border"></div>
+<div id="miniopt">
+<div style="display: flex;"><p id="config3">setup ice cooling</p><button class="donebtn">optimize</button></div>
+<div style="display: flex;"><p id="config4">keep surrounding temp cool</p><button class="donebtn">optimize</button></div>
+<div style="display: flex;"><p id="config2">empty storage manually</p><button class="donebtn">optimize</button></div>
+<div style="display: flex;"><p id="config1">configure icetimer</p><button class="donebtn">optimize</button></div>
+<div style="display: flex;"><p id="config5">unplug reduce power usage</p><button class="donebtn">optimize</button></div></div>
+</div></div>
+<div id="trendscreen">
+<h1></h1>
+<h1 id="overview">you've had a chill week 🤗</h1>
+<p id="otext">weekly trend 1 out of 3</p>
+</div>
+
+<div id="bar"><img id="timer" src="asset/schedule_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="">
+<img src="asset/thermostat_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" id="log" alt="">
+<img src="asset/cloud_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" id="weather" alt="">
+<img src="asset/timeline_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24 (1).png" id="trend" alt="">
+<img src="asset/widgets_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" id="settings" alt=""></div>
+<div id="dashboard"><p style="margin-left: 10px;">waterlvl</p><img id="waterlvl" src="asset/humidity_low_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="">
+<p style="margin-left: 10px;">est.temp</p><img src="asset/thermometer_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" id="tempd" alt="">
+<p style="margin-left: 10px;">weather</p><img src="asset/sunny_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" id="weatherd" alt="">
+<p style="margin-left: 10px;">running</p><img src="asset/timer_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" id="time" alt=""><p id="runtime">00:00</p>
+<p style="margin-left: -4px;">alerts</p><img src="asset/notifications_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" id="msgd" alt=""><p id="icon"></p></div>
+<div id="msgbx"><h5>notification</h5></div>
+<audio id="play" src=""></audio>
+</body>
+<script src="index.js"></script>
+</html>
