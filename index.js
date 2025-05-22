@@ -241,7 +241,7 @@ document.getElementById("min").innerHTML=min
 if(min<10){document.getElementById("min").innerHTML="0"+min}}
 if(min==-1){overtmode=true
 console.log("overmode")
-document.getElementById("play").src="asset/notification-pluck-off-269290.mp3"
+document.getElementById("play").src="notification-pluck-off-269290.mp3"
 document.getElementById("play").play()
 document.getElementById("refillbtn").style.backgroundColor="rgb(27, 234, 155)"
 }
@@ -269,7 +269,7 @@ document.getElementById("min").innerHTML=min
 if(min<10){document.getElementById("min").innerHTML="0"+min}
 if(min==overtime && sec==0){
 setTimeout(()=>{notification("overtime detected !!")}, 1000)
-document.getElementById("play").src="asset/notification-alert-269289.mp3"
+document.getElementById("play").src="notification-alert-269289.mp3"
 document.getElementById("play").play()
 document.getElementById("refillbtn").style.backgroundColor="rgb(255, 49, 38)"
 document.getElementById("sec").style.color="rgb(255, 49, 38)"
@@ -644,6 +644,6 @@ create1.innerHTML="x"
 create.append(create1)
 create1.addEventListener("click", ()=>{create.style.display="none"})
 document.getElementById("msgbx").append(create)
-document.getElementById("play").src="asset/notification-2-269292.mp3"
+document.getElementById("play").src="notification-2-269292.mp3"
 document.getElementById("play").play()
 }
