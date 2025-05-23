@@ -62,7 +62,7 @@ document.getElementById("timescreen").style.display="none"
 document.getElementById("logscreen").style.display="none"
 document.getElementById("trendscreen").style.display="none"
 document.getElementById("weatherscreen").style.display="flex"
-if(temperature<=35){priority="low"
+if(temperature<=25){priority="low"
 document.getElementById("config1").style.color="grey"
 document.getElementById("config2").style.color="grey"
 document.getElementById("config4").style.color="grey"
@@ -73,14 +73,14 @@ document.getElementsByClassName("donebtn").item(3).style.backgroundColor="rgb(17
 document.getElementsByClassName("donebtn").item(4).style.backgroundColor="rgb(176, 176, 176)"
 templimit=1
 }
-else if(temperature<=37){priority="mid"
+else if(temperature<35){priority="mid"
 document.getElementById("config1").style.color="grey"
 document.getElementById("config5").style.color="grey"
 document.getElementsByClassName("donebtn").item(4).style.backgroundColor="rgb(176, 176, 176)"
 document.getElementsByClassName("donebtn").item(3).style.backgroundColor="rgb(176, 176, 176)"
 templimit=3
 }
-else if(temperature<=40){priority="high"
+else if(temperature<=65){priority="high"
 templimit=5
 
 }
