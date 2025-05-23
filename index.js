@@ -86,11 +86,36 @@ templimit=5
 }
 document.getElementById("esttemp").innerHTML = Math.round(50+(temperature * tempfactor))+"°C estimated"
   document.getElementById("temp").innerHTML = temperature+"°C"
-if(weathercode==0){document.getElementById("undertemp").innerHTML = "kaduna clear sky (sunny)"}
-else if(weathercode==1){document.getElementById("undertemp").innerHTML = "kaduna mainly clear"}
-else if(weathercode==2){document.getElementById("undertemp").innerHTML = "kaduna cloudy"}
-else if(weathercode==3){document.getElementById("undertemp").innerHTML = "kaduna overcast (thick sky)"}
-else{document.getElementById("undertemp").innerHTML = "weathercode unavailable"}
+if(weathercode==0){document.getElementById("undertemp").innerHTML = "kaduna "+"Clear sky"}
+else if(weathercode==1){document.getElementById("undertemp").innerHTML = "kaduna "+"Mainly clear"}
+else if(weathercode==2){document.getElementById("undertemp").innerHTML = "kaduna "+"Partly cloudy"}
+else if(weathercode==3){document.getElementById("undertemp").innerHTML = "kaduna "+"Overcast"}
+else if(weathercode==45){document.getElementById("undertemp").innerHTML = "kaduna "+"Fog"}
+else if(weathercode==48){document.getElementById("undertemp").innerHTML = "kaduna "+"Depositing rime fog"}
+else if(weathercode==51){document.getElementById("undertemp").innerHTML = "kaduna "+"Light drizzle"}
+else if(weathercode==53){document.getElementById("undertemp").innerHTML = "kaduna "+"Moderate drizzle"}
+else if(weathercode==55){document.getElementById("undertemp").innerHTML = "kaduna "+"Dense drizzle"}
+else if(weathercode==56){document.getElementById("undertemp").innerHTML = "kaduna "+"Light freezing drizzle"}
+else if(weathercode==57){document.getElementById("undertemp").innerHTML = "kaduna "+"Dense freezing drizzle"}
+else if(weathercode==61){document.getElementById("undertemp").innerHTML = "kaduna "+"Slight rain"}
+else if(weathercode==63){document.getElementById("undertemp").innerHTML = "kaduna "+"Moderate rain"}
+else if(weathercode==65){document.getElementById("undertemp").innerHTML = "kaduna "+"Heavy rain"}
+else if(weathercode==66){document.getElementById("undertemp").innerHTML = "kaduna "+"Light freezing rain"}
+else if(weathercode==67){document.getElementById("undertemp").innerHTML = "kaduna "+"Heavy freezing rain"}
+else if(weathercode==71){document.getElementById("undertemp").innerHTML = "kaduna "+"Slight snow fall"}
+else if(weathercode==73){document.getElementById("undertemp").innerHTML = "kaduna "+"Moderate snow fall"}
+else if(weathercode==75){document.getElementById("undertemp").innerHTML = "kaduna "+"Heavy snow fall"}
+else if(weathercode==77){document.getElementById("undertemp").innerHTML = "kaduna "+"Snow grains"}
+else if(weathercode==80){document.getElementById("undertemp").innerHTML = "kaduna "+"Slight rain showers"}
+else if(weathercode==81){document.getElementById("undertemp").innerHTML = "kaduna "+"Moderate rain showers"}
+else if(weathercode==82){document.getElementById("undertemp").innerHTML = "kaduna "+"Violent rain showers"}
+else if(weathercode==85){document.getElementById("undertemp").innerHTML = "kaduna "+"Slight snow showers"}
+else if(weathercode==86){document.getElementById("undertemp").innerHTML = "kaduna "+"Heavy snow showers"}
+else if(weathercode==95){document.getElementById("undertemp").innerHTML = "kaduna "+"Thunderstorm"}
+else if(weathercode==96){document.getElementById("undertemp").innerHTML = "kaduna "+"Thunderstorm with slight hail"}
+else if(weathercode==99){document.getElementById("undertemp").innerHTML = "kaduna "+"Thunderstorm with heavy hail"}
+else{document.getElementById("undertemp").innerHTML = "unknown weather"}
+
 if(Math.round(50+(temperature * tempfactor))>=70){notification("optimize for high temp today !")}
 document.getElementById("tempd").style.backgroundImage="linear-gradient(rgb(255, 255, 255) "+(100-Math.round(50+(temperature * tempfactor)))+"%, rgba(54, 54, 54, 0.9) 50%)"
 
