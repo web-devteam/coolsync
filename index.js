@@ -718,8 +718,8 @@ document.getElementById("play").play()
 }
 setInterval(()=>{
 document.getElementById("tempd").style.backgroundImage="linear-gradient(rgb(255, 255, 255) "+(100-Math.round(50+(temperature * tempfactor)))+"%, rgba(54, 54, 54, 0.9) 50%)"
-if(Number(time)<6){document.getElementById("weatherd").src="asset/bedtime_24dp_000000_FILL0_wght400_GRAD0_opsz24.png"}
-else if(Number(time)<12){document.getElementById("weatherd").src="asset/sunny_24dp_000000_FILL0_wght400_GRAD0_opsz24.png"}
-else if(Number(time)<19){document.getElementById("weatherd").src="asset/cloud_24dp_000000_FILL0_wght400_GRAD0_opsz24.png"}
-else if(Number(time)<23){document.getElementById("weatherd").src="asset/bedtime_24dp_000000_FILL0_wght400_GRAD0_opsz24.png"}
+if(Number(time)<6){document.getElementById("weatherd").src="bedtime_24dp_000000_FILL0_wght400_GRAD0_opsz24.png"}
+else if(Number(time)<12){document.getElementById("weatherd").src="sunny_24dp_000000_FILL0_wght400_GRAD0_opsz24.png"}
+else if(Number(time)<19){document.getElementById("weatherd").src="cloud_24dp_000000_FILL0_wght400_GRAD0_opsz24.png"}
+else if(Number(time)<23){document.getElementById("weatherd").src="bedtime_24dp_000000_FILL0_wght400_GRAD0_opsz24.png"}
 }, 5000)
