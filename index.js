@@ -2,8 +2,11 @@ let temperature = 34
 let priority = "low"
 let date = new Date
 date=date.toDateString()
+let weathercode=4
 date=date.slice(0, 3)
-
+let time = new Date
+time=time.toLocaleTimeString()
+time=time.slice(0, 2)
 let templimit = 0
 let tempfactor = 0.5
 const url = 'https://api.open-meteo.com/v1/forecast?latitude=10.5036&longitude=7.4337&current=temperature_2m';
@@ -23,7 +26,23 @@ fetch(url)
   .catch(error => {
     console.error('Error fetching weather data:', error);
   });
+const url2 = 'https://api.open-meteo.com/v1/forecast?latitude=10.5036&longitude=7.4337&current_weather=true';
+
+fetch(url2)
+  .then(response => {
+    if (!response.ok) {throw new Error(`HTTP error! Status: response.status`);
    
+  } return response.json();}
+  )
+  .then(data => {
+    const temp = data.current_weather.weathercode;
+    weathercode=temp
+    console.log(`Current weathercode in Lagos:${temp}°C`);
+
+  })
+  .catch(error => {
+    console.error('Error fetching weather data:', error);
+  });
 
 document.getElementById("timer").addEventListener("click", ()=>{
 document.getElementById("timescreen").style.display="flex"
@@ -66,6 +85,12 @@ templimit=5
 
 }
 document.getElementById("esttemp").innerHTML = Math.round(50+(temperature * tempfactor))+"°C estimated"
+  document.getElementById("temp").innerHTML = temperature+"°C"
+if(weathercode==0){document.getElementById("undertemp").innerHTML = "kaduna clear sky (sunny)"}
+else if(weathercode==1){document.getElementById("undertemp").innerHTML = "kaduna mainly clear"}
+else if(weathercode==2){document.getElementById("undertemp").innerHTML = "kaduna cloudy"}
+else if(weathercode==3){document.getElementById("undertemp").innerHTML = "kaduna overcast (thick sky)"}
+else{document.getElementById("undertemp").innerHTML = "weathercode unavailable"}
 if(Math.round(50+(temperature * tempfactor))>=70){notification("optimize for high temp today !")}
 document.getElementById("tempd").style.backgroundImage="linear-gradient(rgb(255, 255, 255) "+(100-Math.round(50+(temperature * tempfactor)))+"%, rgba(54, 54, 54, 0.9) 50%)"
 
@@ -209,6 +234,7 @@ if(result==sum3 && result2==sum5){document.getElementById("overview").innerHTML=
 if(result==sum3 && result2==sum5 && sum7==1){document.getElementById("overview").innerHTML="(90) intense sessions 🔥"}
 if(result==sum3 && result2==sum6){document.getElementById("overview").innerHTML="(100) been pushing limits ⚠️"}
 if(result==sum3 && result2==sum6 && sum7==1){document.getElementById("overview").innerHTML="(100) extreme sessions ⚠️"}
+if(logavgarray.length<5){document.getElementById("overview").innerHTML="insufficient data for weekend trend ⛓️‍💥"}
 }
 else{document.getElementById("overview").innerHTML="weekend trend unavailable ⛔"
 }
