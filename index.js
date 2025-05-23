@@ -160,6 +160,31 @@ let logsessionarray = []
 let logsessionno = 0
 let sessionid = 0
 let logpacks=0
+function getWeekNumber(date = new Date()) {
+  const firstJan = new Date(date.getFullYear(), 0, 1);
+  const days = Math.floor((date - firstJan) / (24 * 60 * 60 * 1000));
+  return Math.ceil((date.getDay() + 1 + days) / 7);
+ 
+}
+
+let currentWeek = getWeekNumber();
+const savedWeek = localStorage.getItem('lastResetWeek');
+
+if (Number(savedWeek) != currentWeek) {
+  localStorage.setItem('lastResetWeek', currentWeek); // Update the week
+  console.log("reset")
+  localStorage.setItem("logminarray", "")
+  localStorage.setItem("logmaxarray", "")
+  localStorage.setItem("logotherarray", "")
+  localStorage.setItem("logavgarray", "")
+  localStorage.setItem("logairarray", "")
+  localStorage.setItem("logconarray", "")
+  localStorage.setItem("logsessionarray", "")
+  localStorage.setItem("logsessionno", "")
+  localStorage.setItem("logpacks", "")
+
+}
+
 if(date=="Mon" && localStorage.getItem("resetlogstored")!="yes"){
 window.alert("reset")
 localStorage.setItem("resetlogstored", "yes")
