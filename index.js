@@ -681,10 +681,18 @@ let sessiontime = 0
 let sessioninc = 1
 let sessionhr = 0
 let sessionmin = 0
+document.getElementById("extra").addEventListener("click", ()=>{
+  location.href="deskoverlay://"
+    document.getElementById("extra").style.display="none"
+})
 document.getElementById("movebtn").addEventListener("click", ()=>{
 
 if(startsession==false){
-
+location.href="rtss://"
+document.getElementById("extra").style.display="flex"
+setTimeout(() => {
+  document.getElementById("extra").style.display="none"
+}, 5000);
 sessionmin=0
 sessiontime=0
 sessionhr=0
