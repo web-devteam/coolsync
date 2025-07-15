@@ -17,12 +17,31 @@ body{
 background-color: rgb(244, 244, 244);
 }
 #mainimg{
-width: 30%;
+width: 27%;
 display: block;
-left: 33%;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 position: fixed;
-margin-top: 11%;
 opacity: 90%;
+}
+#extra{
+font-family: sans-serif;
+background-color: rgb(61, 61, 61);
+position: fixed;
+bottom: 0px;
+width: 230px;
+height: 40px;
+border-radius: 5px;
+color: white;
+display: none;
+cursor: pointer;
+padding-right: 20px;
+align-items: center;
+justify-content: center;
+font-size: 14px;
+transform: translate(-50%, -50%);
+left: 50%;
 }
 #movebtn{
 width: 60px;
